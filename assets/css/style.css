@@ -10,7 +10,7 @@ body { /*bagian umu seluruh halaman */
    2. NAVBAR (Semua bagian menu navigasi)
 ============================================ */
 .bg-nav { /*warna background navbar*/
-  background-color: #18883b;
+  background-color: #e295c7;
 }
 
 
@@ -22,7 +22,7 @@ body { /*bagian umu seluruh halaman */
 }
 
 .navbar-light .navbar-nav .nav-link:hover { /*kalau di hover -> berubah jadi biru*/
-  color: #0d6efd !important;
+  color: #6fb4e2 !important;
 }
 
 /*hover: efek ketika mouse diarahkan ke suatu elemen, biasanya tombol, link, gambar, atau card*/
@@ -32,8 +32,27 @@ body { /*bagian umu seluruh halaman */
 ============================================ */
 /* Hero Section */
 .hero-section {
-    background-color: #81a3f7;
+    background-color: #91abed;
 }
+
+.hero-content {
+    padding-left: 60px;     /* memberi jarak dari sisi kiri */
+    max-width: 550px;       /* biar teks tidak melebar terlalu panjang */
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding-left: 0;
+        text-align: center;   /* rapi saat mobile */
+    }
+}
+
 
 /* ============================================
    3. UTILITIES (Class tambahan kecil)
