@@ -1,86 +1,76 @@
-/* ============================================
-   1. GLOBAL (Bagian umum seluruh halaman)
-============================================ */
-body { /*bagian umu seluruh halaman */
+.title-brand span {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+body {
   font-family: Raleway, sans-serif;
-  background: #ffffff;
+  background: #5b9ae3;
 }
 
-/* ============================================
-   2. NAVBAR (Semua bagian menu navigasi)
-============================================ */
-.bg-nav { /*warna background navbar*/
-  background-color: #e295c7;
+.bg-nav {
+  background-color: #f57eb2;
 }
 
+.mt--2 {
+  margin-top: -0.5rem !important;
+}
 
-.navbar-light .navbar-nav .nav-link { /*warna tulisan menu )home,about us,services, dll)*/
+.hr-dotted {
+  border-top: 1px dotted;
+  opacity: .25;
+}
+
+.navbar-brand {
+    font-family: 'Righteous', sans-serif;
+    font-weight: 500; /* biar lebih premium */
+    letter-spacing: 0.3px; /* opsional, bikin rapi */
+}
+
+.navbar-nav {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* biar lebih premium */
+    letter-spacing: 0.3px; /* opsional, bikin rapi */
+}
+
+.navbar-light .navbar-nav .nav-link {
   color: #212529 !important;
   font-size: 16px;
   font-weight: 600;
   transition: all 0.4s;
 }
 
-.navbar-light .navbar-nav .nav-link:hover { /*kalau di hover -> berubah jadi biru*/
-  color: #6fb4e2 !important;
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fd0d9d !important;
 }
 
-/*hover: efek ketika mouse diarahkan ke suatu elemen, biasanya tombol, link, gambar, atau card*/
-
-/* ============================================
-   3. Hero Section
-============================================ */
-/* Hero Section */
-.hero-section {
-    background-color: #91abed;
+.navbar-light .navbar-nav .nav-link {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
-.hero-content {
-    padding-left: 60px;     /* memberi jarak dari sisi kiri */
-    max-width: 550px;       /* biar teks tidak melebar terlalu panjang */
+/* bentuk kapsul */
+.navbar-light .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: #0d6efd;
+  border-radius: 999px; /* kunci bentuk kapsul */
+  transform: translate(-50%, -50%);
+  transition: 0.4s ease;
+  z-index: -1;
 }
 
-@media (max-width: 992px) {
-    .hero-content {
-        padding-left: 20px;
-    }
+.navbar-light .navbar-nav .nav-link:hover::before {
+  width: 90px;   /* diameter lingkaran */
+  height: 40px;
 }
 
-@media (max-width: 768px) {
-    .hero-content {
-        padding-left: 0;
-        text-align: center;   /* rapi saat mobile */
-    }
-}
-
-
-/* ============================================
-   3. UTILITIES (Class tambahan kecil)
-============================================ */
-.mt--2 { /*maargin top negatif (untuk narik/ngerekatin bagian ke atas. unutk menggeser elemen naik sedikit*/
-  margin-top: -0.5rem !important;
-}
-
-.hr-dotted { /*garis putu-putus*/
-  border-top: 1px dotted;
-  opacity: .25;
-}
-
-/* ============================================
-   4. WAVE SEPARATOR (Pembatas antar section)
-============================================ */
-.wave svg {
-    fill: #800000;
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* ============================================
-   5. OUR SERVICES
-============================================ */
-/* Our Services */
-.feature-icon-1 { /*icon bulat besar (biasanya bagian services)*/
+.feature-icon-1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -90,31 +80,8 @@ body { /*bagian umu seluruh halaman */
   color: #fff;
   border-radius: 100%;
 }
-.services-section {
-    background-color: #ffffff;
-}
 
-/* ============================================
-   5. ABOUT US
-============================================ */
-/* About Us */
-.about-section {
-    background-color: #e9ecff;
-}
-
-/* ============================================
-   5. PORTOFOLIO
-============================================ */
-/* Portfolio */
-.portfolio-section {
-    background-color: #dfe7ff;
-}
-
-
-/* ============================================
-   6. CONTACT SECTION (Bagian kontak / sosial media)
-============================================ */
-.btn-social-media { /*tombol social media bulat kecil (ikon ig/tiktok)*/
+.btn-social-media {
   color: #31316a;
   background-color: #cdcfdf;
   border-color: #cdcfdf;
@@ -128,19 +95,13 @@ body { /*bagian umu seluruh halaman */
   border-radius: 100%;
 }
 
-.btn-social-media:hover { /*hovernya*/
+.btn-social-media:hover {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.contact-section {
-    background-color: #ffffff;
-}
 
-/* ============================================
-   7. FOOTER
-============================================ */
-/* Footer */ /*warna link footer*/
+/* Footer */
 .footer .copyright a {
   color: #ee5050;
   text-decoration: none;
@@ -159,9 +120,58 @@ body { /*bagian umu seluruh halaman */
   color: #0d6efd;
 }
 
-.wave svg {
-    fill: #800000;
-    display: block;
-    width: 100%;
-    height: auto;
+
+
+
+.text-1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500; /* biar lebih premium */
+    letter-spacing: 0.3px; /* opsional, bikin rapi */
 }
+
+.text-2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* biar lebih premium */
+    letter-spacing: 0.3px; /* opsional, bikin rapi */
+    text-align: justify !important;
+}
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.16);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* STYLE UTAMA TOMBOL */
+.btn-hero {
+    background-color: #ff4d6d !important;   /* warna background default */
+    color: #cd1515 !important;              /* warna teks */
+    border: none;
+    transition: all 0.3s ease-in-out;       /* animasi halus */
+    box-shadow: 0 4px 10px rgba(255, 77, 109, 0.4);
+}
+
+/* HOVER EFFECT */
+.btn-hero:hover {
+    background-color: #ff1e46 !important;   /* warna saat hover */
+    color: #52128f !important;
+    transform: translateY(-4px);            /* animasi naik */
+    box-shadow: 0 8px 16px rgba(255, 30, 70, 0.4);
+}
+
+/* ANIMASI KETIKA DI-FOCUS (ACCESSIBILITY) */
+.btn-hero:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 77, 109, 0.3);
+}
+
+.btn-hero {
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
