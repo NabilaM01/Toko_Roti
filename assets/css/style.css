@@ -135,24 +135,7 @@ body {
   border-color: #0d6efd;
 }
 
-/* Footer */
-.footer .copyright a {
-  color: #ee5050;
-  text-decoration: none;
-}
 
-.footer .copyright a:hover {
-  color: #eb2d2d;
-}
-
-.footer .link a {
-  color: #212529;
-  text-decoration: none;
-}
-
-.footer .link a:hover {
-  color: #0d6efd;
-}
 
 
 
@@ -206,3 +189,129 @@ body {
     margin-right: auto;
 }
 
+/* -------- CONTACT ----------- */
+/* Contact Section */
+.contact-section {
+    background: #f8f9fa; /* warna abu lembut */
+    position: relative;
+}
+
+/* Decorative subtle shapes */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 160px;
+    height: 160px;
+    background: rgba(79, 139, 241, 0.15);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.contact-section::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 200px;
+    height: 200px;
+    background: rgba(79, 139, 241, 0.12);
+    border-radius: 50%;
+    filter: blur(8px);
+}
+
+/* Card styling */
+.contact-section .card {
+    border: none;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.contact-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.07);
+}
+
+/* Icon styling */
+.contact-section i {
+    color: #4f8bf1 !important;
+    transition: all 0.3s ease;
+}
+
+.contact-section .d-flex:hover i {
+    transform: scale(1.15);
+}
+
+/* Text styling */
+.contact-section h3 {
+    font-weight: 700;
+}
+
+.contact-section h5 {
+    font-weight: 600;
+}
+
+.contact-section .lead {
+    color: #6c757d;
+}
+
+/* HR dotted */
+.hr-dotted {
+    border: none;
+    border-bottom: 2px dotted rgba(0,0,0,0.1);
+    margin: 10px 0;
+}
+
+/* Google Maps hover effect */
+.contact-section iframe {
+    transition: all 0.3s ease;
+}
+
+.contact-section iframe:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* -------- FOOTER ----------- */
+/* Footer Style */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #212529;
+}
+
+.footer .copyright a {
+    color: #ee5050;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer .copyright a:hover {
+    color: #c53a3a;
+}
+
+.footer .link a {
+    color: #212529;
+    text-decoration: none;
+}
+
+.footer .link a:hover {
+    color: #ee5050;
+}
+
+/* Sticky footer fix */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+}
