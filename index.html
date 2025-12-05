@@ -198,12 +198,10 @@
         </div>
 
 
-
-
 <!------------------------------------------------------------>
 
 <!-- Services Section -->
-<div id="services" class="container-fluid py-5" style="background:#d8ecff;">
+<div id="services" class="container-fluid py-5 animated-soft-bg">
     <div class="container text-center">
         <div class="row">
             <div class="col-lg-8 mx-auto">
@@ -275,27 +273,10 @@
 </div>
 
 
-
-<!-- Hover Effect CSS -->
-<style>
-    .service-card {
-        transition: transform .3s ease, box-shadow .3s ease;
-    }
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    }
-</style>
-
-
-
-        <!-- About -->
-
-<div id="about" class="container-fluid py-5" 
-     style="background:#ffd7ef; border-radius: 0;">
+<!-- About Section -->
+<div id="about" class="container-fluid py-5 animated-soft-bg">
 
     <div class="container">
-
         <div class="row text-center">
             <div class="col-lg-8 mx-auto">
                 <h3 class="fw-bold lh-2 mb-3" style="color:#ff4fa3;">ABOUT US</h3>
@@ -307,7 +288,6 @@
 
         <div class="row align-items-center g-5 py-4">
             
-
             <div class="col-lg-5">
                 <img src="estecdonutrbg.png"
                     class="d-block mx-auto img-fluid shadow rounded-4"
@@ -342,6 +322,39 @@
 
     </div>
 </div>
+
+
+
+<!-- Hover Effect + Background Animation -->
+<style>
+    /* Card Hover */
+    .service-card {
+        transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    /* 🌈 Pink–Blue Soft Animated Background */
+    .animated-soft-bg {
+        background: linear-gradient(135deg, 
+            #ffd7ef, 
+            #d8ecff, 
+            #ffe4f9, 
+            #d6f6ff
+        );
+        background-size: 400% 400%;
+        animation: softGradient 12s ease infinite;
+    }
+
+    @keyframes softGradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+</style>
+
 
 
         <!-- Portfolio -->
