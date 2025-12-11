@@ -1,285 +1,92 @@
-body {
+/* ============================================
+   1. GLOBAL (Bagian umum seluruh halaman)
+============================================ */
+body { /*bagian umu seluruh halaman */
   font-family: Raleway, sans-serif;
-  background: linear-gradient(135deg,
-      #ffe9f5,
-      #f7f0ff,
-      #e9f6ff,
-      #fff3fa,
-      #f0faff
-  );
-  background-size: 600% 600%; /* lebih besar supaya gradasi halus */
-  animation: softGradient 18s ease-in-out infinite; /* lebih smooth dan lambat */
+  background: #5b9ae3;
 }
 
-@keyframes softGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* ============================================
+   2. NAVBAR (Semua bagian menu navigasi)
+============================================ */
+.bg-nav { /*warna background navbar*/
+  background-color: #18883b;
 }
 
-.bg-nav {
-  background-color: #b1c9f9;
-}
 
-.mt--2 {
-  margin-top: -0.5rem !important;
-}
-
-.hr-dotted {
-  border-top: 1px dotted;
-  opacity: .25;
-}
-
-.navbar-brand {
-    font-family: 'Righteous', sans-serif;
-    font-weight: 500; /* biar lebih premium */
-    letter-spacing: 0.3px; /* opsional, bikin rapi */
-}
-
-.navbar-nav {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500; /* biar lebih premium */
-    letter-spacing: 0.3px; /* opsional, bikin rapi */
-}
-
-.navbar-light .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link { /*warna tulisan menu )home,about us,services, dll)*/
   color: #212529 !important;
   font-size: 16px;
   font-weight: 600;
   transition: all 0.4s;
 }
 
-/* tulisan navigasi */
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #4f8bf1 !important;
+.navbar-light .navbar-nav .nav-link:hover { /*kalau di hover -> berubah jadi biru*/
+  color: #0d6efd !important;
 }
 
-.navbar-light .navbar-nav .nav-link {
+/*hover: efek ketika mouse diarahkan ke suatu elemen, biasanya tombol, link, gambar, atau card*/
+
+<!---->
+.donut-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.donut-card {
+  position: relative;
+  width: 360px;
+  padding-top: 100px;
+}
+
+.donut-float {
+  width: 220px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.donut-box {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 25px;
+  padding: 110px 25px 30px;
+  text-align: center;
+  color: #F4E2BB;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   position: relative;
   z-index: 1;
-  transition: color 0.3s ease;
 }
 
-/* bentuk kapsul navigasi */
-.navbar-light .navbar-nav .nav-link::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 0;
-  height: 0;
-  background: #ea90a8;
-  border-radius: 999px; /* kunci bentuk kapsul */
-  transform: translate(-50%, -50%);
-  transition: 0.4s ease;
-  z-index: -1;
+/* ⭐ Kotak kapsul harga warna pink */
+.price-tag {
+  background: #ff7eb8;
+  color: white;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 25px;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
-.navbar-light .navbar-nav .nav-link:hover::before {
-  width: 90px;   /* diameter lingkaran */
-  height: 40px;
+/* ⭐ Tombol hijau */
+.btn-green {
+  background: #0a3980;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.feature-icon-1 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 5rem;
-  height: 5rem;
-  font-size: 3rem;
-  color: #fff;
-  border-radius: 100%;
-}
-
-.btn-social-media {
-  color: #31316a;
-  background-color: #cdcfdf;
-  border-color: #cdcfdf;
-  width: 2rem;
-  height: 2rem;
-  padding: 1.2rem;
-  text-align: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-}
-
-.btn-social-media:hover {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
-}
-
-
-/* -------- HERO ----------- */
-.text-1 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 500; /* biar lebih premium */
-    letter-spacing: 0.3px; /* opsional, bikin rapi */
-}
-
-.text-2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500; /* biar lebih premium */
-    letter-spacing: 0.3px; /* opsional, bikin rapi */
-    text-align: justify !important;
-}
-
-.glass-box {
-    background: rgba(255, 255, 255, 0.16);
-    padding: 30px;
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* STYLE UTAMA TOMBOL */
-.btn-hero {
-    background-color: #4f8bf1 !important;   /* warna background default */
-    color: #000000 !important;              /* warna teks */
-    border: none;
-    transition: all 0.3s ease-in-out;       /* animasi halus */
-}
-
-/* HOVER EFFECT */
-.btn-hero:hover {
-    background-color: #ea90a8 !important;   /* warna saat hover */
-    color: #140523 !important;
-    transform: translateY(-4px);            /* animasi naik */
-    box-shadow: 0 8px 16px rgba(255, 30, 70, 0.4);
-}
-
-/* ANIMASI KETIKA DI-FOCUS (ACCESSIBILITY) */
-.btn-hero:focus {
-    outline: none;
-}
-
-.btn-hero {
-    width: fit-content;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* -------- CONTACT ----------- */
-/* Decorative subtle shapes */
-.contact-section::before {
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: -40px;
-    width: 160px;
-    height: 160px;
-    background: rgba(79, 139, 241, 0.15);
-    border-radius: 50%;
-    filter: blur(10px);
-}
-
-.contact-section::after {
-    content: "";
-    position: absolute;
-    bottom: -40px;
-    right: -40px;
-    width: 200px;
-    height: 200px;
-    background: rgba(79, 139, 241, 0.12);
-    border-radius: 50%;
-    filter: blur(8px);
-}
-
-/* Card styling */
-.contact-section .card {
-    border: none;
-    background: #ffffff;
-    transition: all 0.3s ease;
-}
-
-.contact-section .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.07);
-}
-
-/* Icon styling */
-.contact-section i {
-    color: #4f8bf1 !important;
-    transition: all 0.3s ease;
-}
-
-.contact-section .d-flex:hover i {
-    transform: scale(1.15);
-}
-
-/* Text styling */
-.contact-section h3 {
-    font-weight: 700;
-}
-
-.contact-section h5 {
-    font-weight: 600;
-}
-
-.contact-section .lead {
-    color: #6c757d;
-}
-
-/* HR dotted */
-.hr-dotted {
-    border: none;
-    border-bottom: 2px dotted rgba(0,0,0,0.1);
-    margin: 10px 0;
-}
-
-/* Google Maps hover effect */
-.contact-section iframe {
-    transition: all 0.3s ease;
-}
-
-.contact-section iframe:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-/* -------- FOOTER ----------- */
-/* Footer Style */
-.footer {
-    background-color: #ffffff;
-    border-top: 1px solid #e5e5e5;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color: #212529;
-}
-
-.footer .copyright a {
-    color: #ee5050;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.footer .copyright a:hover {
-    color: #c53a3a;
-}
-
-.footer .link a {
-    color: #212529;
-    text-decoration: none;
-}
-
-.footer .link a:hover {
-    color: #ee5050;
-}
-
-/* Sticky footer fix */
-html, body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer {
-    margin-top: auto;
+/* ⭐ Hover: lebih terang + sedikit membesar */
+.btn-green:hover {
+  background: #0c2f8767;
+  transform: scale(1.05);
 }
