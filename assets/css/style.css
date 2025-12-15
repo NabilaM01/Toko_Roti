@@ -1,44 +1,20 @@
-.hero {
-  background: linear-gradient(180deg, #f78bbd, #7cb4f9);
-  background: linear-gradient(120deg, #ff9ecf, #a7c8ff, #ffb4d6, #92afff);
-  background-size: 300% 300%;
-  animation: gradientMove 12s ease infinite;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.float-shapes span {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: rgba(240, 233, 132, 0.925);
-    border-radius: 50%;
-    animation: float 8s infinite ease-in-out;
-}
-
-.float-shapes span:nth-child(1) { left: 10%; top: 60%; animation-duration: 7s; }
-.float-shapes span:nth-child(2) { left: 40%; top: 70%; animation-duration: 6s; }
-.float-shapes span:nth-child(3) { left: 75%; top: 65%; animation-duration: 9s; }
-
-@keyframes float {
-    0% { transform: translateY(0); opacity: 0.5; }
-    50% { transform: translateY(-40px); opacity: 1; }
-    100% { transform: translateY(0); opacity: 0.5; }
-}
-
-
-.title-brand span {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-}
-
 body {
   font-family: Raleway, sans-serif;
-  background: #ffff;
+  background: linear-gradient(135deg,
+      #ffe9f5,
+      #f7f0ff,
+      #e9f6ff,
+      #fff3fa,
+      #f0faff
+  );
+  background-size: 600% 600%; /* lebih besar supaya gradasi halus */
+  animation: softGradient 18s ease-in-out infinite; /* lebih smooth dan lambat */
+}
+
+@keyframes softGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .bg-nav {
@@ -136,9 +112,7 @@ body {
 }
 
 
-
-
-
+/* -------- HERO ----------- */
 .text-1 {
     font-family: 'Nunito', sans-serif;
     font-weight: 500; /* biar lebih premium */
@@ -190,12 +164,6 @@ body {
 }
 
 /* -------- CONTACT ----------- */
-/* Contact Section */
-.contact-section {
-    background: #f8f9fa; /* warna abu lembut */
-    position: relative;
-}
-
 /* Decorative subtle shapes */
 .contact-section::before {
     content: "";
