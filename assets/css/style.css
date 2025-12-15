@@ -283,3 +283,66 @@ body {
 .footer {
     margin-top: auto;
 }
+
+.donut-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.donut-card {
+  position: relative;
+  width: 360px;
+  padding-top: 100px;
+}
+
+.donut-float {
+  width: 220px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.donut-box {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 25px;
+  padding: 110px 25px 30px;
+  text-align: center;
+  color: #ff4fa3;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* ⭐ Kotak kapsul harga warna pink */
+.price-tag {
+  background: #ff7eb8;
+  color: white;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 25px;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* ⭐ Tombol hijau */
+.btn-green {
+  background: #0a3980;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* ⭐ Hover: lebih terang + sedikit membesar */
+.btn-green:hover {
+  background: #0c2f8767;
+  transform: scale(1.05);
+}
